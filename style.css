@@ -1,0 +1,117 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Reset CSS */ 
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --radius : 15px;
+  --app-width : 600px;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  min-height : 100vh;
+  background : url('bg.jpg') center;
+  background-size : cover;
+}
+
+.app {
+  color : #ffffff;
+  background-color : rgba(0,0,0,0.5);
+  width : var(--app-width);
+  border-radius : var(--radius);
+  padding : 2rem;
+  box-shadow : 0px 40px 40px -20px black;
+}
+
+.app h1 {
+  margin-top : 0;
+  margin-bottom : 40px;
+  font-size : 30px;
+}
+
+.todo-input {
+  width : 100%;
+  margin-bottom : 2rem;
+  border : 0px;
+  border-radius : var(--radius);
+  padding : 1rem 1.5rem;
+  font-size : 15px;
+  background-color : #f4f4f425;
+  color : white;
+}
+
+.todo-input::placeholder {
+  color : #ffffff70;
+}
+
+.todos, .pending-todos, .completed-todos {
+  display : flex;
+  flex-direction : column;
+  gap : 1rem;
+}
+
+.todo-item {
+  background-color : #f4f4f4bd;
+  padding : 1rem 1.5rem;
+  border-radius : var(--radius);
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  color : black;
+}
+
+.todo-item span {
+  display : flex;
+  gap : 1rem;
+  align-items : center;
+}
+
+.todo-item input [type=checkbox] {
+  width : 20px;
+  height : 20px;
+  accent-color : #4c102b;
+}
+
+.todo-item a {
+  color : #4c102b;
+}
+
+.todo-item a svg {
+  pointer-events : none;
+}
+
+.completed-todos .todo-item {
+  background-color : #74c674;
+  text-decoration : line-through 5%;
+}
+
+.completed-title {
+  font-size : 18px;
+  margin-top : 30px;
+  margin-bottom : 10px;
+}
+
+.pending-title {
+  font-size : 18px;
+  margin-top : 10px;
+  margin-bottom : 10px;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+}
+
+footer p {
+
+color : white;
+}
